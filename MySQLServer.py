@@ -1,7 +1,7 @@
 # MySQLServer.py
 
 import mysql.connector
-from mysql.connector import Error
+from mysql.connector import Error # This line is crucial for 'Error' to be recognized directly
 
 def create_alx_book_store_database():
     """
@@ -29,7 +29,7 @@ def create_alx_book_store_database():
 
             print("Database 'alx_book_store' created successfully!")
 
-    except Error as e:  # Corrected: Explicitly catching mysql.connector.Error
+    except Error as e: # This directly refers to the imported 'Error'
         # Handle connection and execution errors
         print(f"Error: Failed to connect to the database or create it. {e}")
 
